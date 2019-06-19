@@ -1,0 +1,8 @@
+[init] spinach: because it's healthy for you!
+[init] screen - 1280x720
+[init] opengl - Intel
+[init]        - 4.5.0 - Build 23.20.16.5018
+[init]        - Intel(R) UHD Graphics 630
+[init]        - vsync: on
+[init] ... ok!
+

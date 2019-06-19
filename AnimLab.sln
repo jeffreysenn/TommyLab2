@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.168
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "AnimLab", "AnimLab\AnimLab.vcxproj", "{F55F39DA-20FD-4F12-AEFA-4C7478DA7745}"
+	ProjectSection(ProjectDependencies) = postProject
+		{D925AB44-C183-4A62-971E-C46944A1010A} = {D925AB44-C183-4A62-971E-C46944A1010A}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "spinach", "spinach\spinach.vcxproj", "{D925AB44-C183-4A62-971E-C46944A1010A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D925AB44-C183-4A62-971E-C46944A1010A}.Debug|x64.ActiveCfg = Debug|x64
+		{D925AB44-C183-4A62-971E-C46944A1010A}.Debug|x64.Build.0 = Debug|x64
+		{D925AB44-C183-4A62-971E-C46944A1010A}.Release|x64.ActiveCfg = Release|x64
+		{D925AB44-C183-4A62-971E-C46944A1010A}.Release|x64.Build.0 = Release|x64
+		{F55F39DA-20FD-4F12-AEFA-4C7478DA7745}.Debug|x64.ActiveCfg = Debug|x64
+		{F55F39DA-20FD-4F12-AEFA-4C7478DA7745}.Debug|x64.Build.0 = Debug|x64
+		{F55F39DA-20FD-4F12-AEFA-4C7478DA7745}.Release|x64.ActiveCfg = Release|x64
+		{F55F39DA-20FD-4F12-AEFA-4C7478DA7745}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6AC0DBE9-E119-4C06-86CF-DA7C8C70373D}
+	EndGlobalSection
+EndGlobal
