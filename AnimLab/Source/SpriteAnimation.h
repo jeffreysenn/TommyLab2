@@ -6,31 +6,43 @@
 #include <spinach.h>
 #include <vector>
 
-struct SpriteAtlas;
-
 struct SpriteAnimation
 {
-   enum Type
-   {
-      LOOPING,
-      PINGPONG,
-      PLAYONCE,
-   };
+	enum Type
+	{
+		LOOPING,
+		PINGPONG,
+		PLAYONCE,
+	};
 
-   SpriteAnimation(SpriteAtlas &atlas);
+	struct Keyframe
+	{
+		uint32_t id_;
+		float duration_;
+	};
+
+	SpriteAnimation(struct SpriteAtlas &atlas);
+
+	Type get_type() const { return type_; }
+
+	const struct SpriteAtlas& get_atlas() const { return atlas_; }
+
+	uint32_t get_total_frames() const { return (uint32_t) keyframes_.size(); }
+
+	bool get_keyframe(const uint32_t index, Keyframe &keyframe) const;
+
+	void set_type(const Type &type) { type_ = type; }
+
+	bool load(const char* filename);
 
 private:
-   SpriteAtlas &atlas_;
+	struct SpriteAtlas &atlas_;
 
-   // note: this is just an example of
-   //       how a "keyframe" might look like
-   struct Keyframe
-   {
-      uint32_t id_;
-      float duration_;
-   };
+	Type type_ = LOOPING;
 
-   std::vector<Keyframe> keyframes_;
+	std::vector<Keyframe> keyframes_;
+
+	void add_keyframe(const Keyframe& keyframe) { keyframes_.push_back(keyframe); }
 };
 
 #endif // SPRITE_ANIMATION_H_INCLUDED

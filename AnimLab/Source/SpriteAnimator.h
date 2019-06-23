@@ -3,19 +3,32 @@
 #ifndef ANIMATOR_H_INCLUDED
 #define ANIMATOR_H_INCLUDED
 
-struct Sprite;
-struct SpriteAnimation;
+#include <cstdint>
+
+#include "SpriteAnimation.h"
+
 
 struct SpriteAnimator
 {
-   SpriteAnimator(Sprite &sprite, SpriteAnimation &animation);
+	SpriteAnimator(struct Sprite &sprite, SpriteAnimation &animation);
 
-   void update(float deltatime);
-   void draw();
+	void update(float deltatime);
+
+	void draw();
 
 private:
-   Sprite &sprite_;
-   SpriteAnimation &animation_;
+	void update_frame();
+
+	struct Sprite& sprite_;
+
+	SpriteAnimation& animation_;
+
+	int32_t current_index_ = 0;
+	int32_t delta_index_ = 1;
+
+	float time_since_current_frame_ = 0;
+
+	struct SpriteAnimation::Keyframe current_key_frame_;
 };
 
 #endif // ANIMATOR_H_INCLUDED

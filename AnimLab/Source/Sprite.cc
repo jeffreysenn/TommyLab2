@@ -25,9 +25,9 @@ void Sprite::set_position(const spinach_vector2_t &position)
    update_positions();
 }
 
-void Sprite::set_texture(const spinach_texture_t &texture)
+void Sprite::set_texture(const spinach_texture_t* texture)
 {
-   texture_ = &texture;
+   texture_ = texture;
 
    update_texcoords();
 }
